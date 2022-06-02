@@ -26,7 +26,7 @@ async def on_message(message):
     
     if message.content == 'w/luckynumber':
         num = random(1,10)
-        await message.channel.send('你今天的幸運數字是' + num)
+        await message.channel.send('你今天的幸運數字是')
     if client.user in message.mentions: # @判定
         translator = googletrans.Translator()
         robotName = client.user.name
