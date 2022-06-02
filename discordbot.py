@@ -1,6 +1,7 @@
 import discord
 import googletrans
 import os
+import random
 from pprint import pprint
 # 輸入自己Bot的TOKEN碼
 TOKEN = os.environ['TOKEN']
@@ -25,6 +26,9 @@ async def on_message(message):
         await message.channel.send('w/hi 說hello')
     if message.content == 'w/hi':
         await message.channel.send('Hello~~')
+    if message.content -- 'w/lucku=num':
+        num = random(1, 10)
+        await message.channel.send('本日幸運數字' +num)
     if client.user in message.mentions: # @判定
         translator = googletrans.Translator()
         robotName = client.user.name
