@@ -37,9 +37,5 @@ async def on_message(message):
         if translator.detect(content).lang == SRCLanguage or SRCLanguage == '':
             remessage = translator.translate(content, dest='en').text
             await message.reply(remessage) 
-        
-while not message.bot.is_closed():
-    await message.channel.send('機器人在線中...')
-    await asyncio.sleep(120)
 # Bot起動
 client.run(TOKEN)
