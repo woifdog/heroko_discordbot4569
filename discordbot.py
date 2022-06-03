@@ -25,9 +25,6 @@ async def on_message(message):
         await message.channel.send('w/hi 說hello')
     if message.content == 'w/hi':
         await message.channel.send('Hello~~~')
-        
-    if message.content == 'w/say':
-        await message.channel.send(message.content)
     if client.user in message.mentions: # @判定
         translator = googletrans.Translator()
         robotName = client.user.name
@@ -40,6 +37,6 @@ async def on_message(message):
         if translator.detect(content).lang == SRCLanguage or SRCLanguage == '':
             remessage = translator.translate(content, dest='en').text
             await message.reply(remessage) 
-
+        
 # Bot起動
 client.run(TOKEN)
