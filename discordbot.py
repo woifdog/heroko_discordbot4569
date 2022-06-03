@@ -38,7 +38,7 @@ async def on_message(message):
             remessage = translator.translate(content, dest='en').text
             await message.reply(remessage) 
         
-while not seif.bot.is_closed():
+while not message.bot.is_closed():
     await message.channel.send('機器人在線中...')
     await asyncio.sleep(120)
 # Bot起動
