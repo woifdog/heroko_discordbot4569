@@ -26,6 +26,8 @@ async def on_message(message):
     if message.content == 'w/hi':
         await message.channel.send('Hello~~~')
         
+    if message.content == 'w/say':
+        await message.channel.send(message.content)
     if client.user in message.mentions: # @判定
         translator = googletrans.Translator()
         robotName = client.user.name
